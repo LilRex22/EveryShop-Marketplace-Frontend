@@ -1,9 +1,10 @@
 import { CircleCheck } from "lucide-react";
+import { HeroSearch } from "../components/HeroSearch"
 
 export function Home() {
     return (
         <div className="font-jakarta">
-            <header className="header_img w-full h-screen bg-cover bg-center p-15">
+            <header className="header_img w-full h-screen bg-cover bg-center px-15 py-10">
                 <div className="flex flex-col">
                     <div className="rounded-4xl w-fit p-1 px-3" style={{backgroundColor: '#92f5a4'}}>
                         <p><CircleCheck className="inline-block mr-1" size={20}/>Verified local trade <span className="me-1 font-extrabold">.</span>Direct buyer-to-seller.</p>
@@ -29,7 +30,9 @@ export function Home() {
                         </div>
                     </div>
                     
-                    <div className=""></div>
+                    <div className="">
+                        <HeroSearch />
+                    </div>
                 </div>
             </header>
         </div>
