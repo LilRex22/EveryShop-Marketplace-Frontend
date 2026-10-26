@@ -35,7 +35,7 @@ export function HeroSearch() {
                 </div>
             </div>
             <div className="flex flex-row items-center gap-4 mt-5">
-                <div className="flex flex-1 items-center gap-2 rounded-xl bg-[#e4e1e6] px-4">
+                <div className="flex flex-1 items-center gap-2 rounded-xl bg-[#f6f2f7] px-4">
                     <Search size={18} className="text-gray-500" />
                     <input
                         value={query}
