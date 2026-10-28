@@ -4,8 +4,8 @@ import { CircleCheck } from "lucide-react";
 export function Footer() {
     return (
         <footer className='font-jakarta px-4 sm:px-8 lg:px-15 py-10 mt-5'>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 border-b border-gray-200 pt-5 pb-10">
-                <div className="sm:col-span-2 lg:col-span-2 flex flex-col gap-6 items-start">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-8 border-b border-gray-200 pt-5 pb-10">
+                <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-6 items-start">
                     <img src={logo} alt="logo" className='h-8 sm:h-10 w-auto'/>
                     <p className='text-md text-gray-500 max-w-md lg:max-w-none'>A friction-free local commerce bridge connecting verified urban artisans
                         , neighbourhood workshops and independent merchants with city residents.

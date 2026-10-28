@@ -1,13 +1,19 @@
 import { Home } from "./pages/Home"
-import { Navbar } from "./components/Navbar"
-import { Footer } from "./components/Footer"
-function App() {
+import { Products } from "./pages/Explore_products"
+import { Layout } from "./components/Layout"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
+function App() {
   return (
     <>
-      <Navbar />
-      <Home />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="explore-products" element={<Products />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

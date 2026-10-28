@@ -29,7 +29,7 @@ export function Navbar() {
             </button>
 
             <div className={`${open ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 w-full lg:w-auto mt-4 lg:mt-0`}>
-                <a href="/explore" className='flex items-center gap-2 hover:text-[#D95D28]'><Search/> Explore Products</a>
+                <a href="/explore-products" className='flex items-center gap-2 hover:text-[#D95D28]'><Search/> Explore Products</a>
                 <a href="/categories block" className='flex items-center gap-2 hover:text-[#D95D28]'><Store /> Discover Shops</a>
                 <a href="/merchant-center" className='flex items-center gap-2 hover:text-[#D95D28]'><LayoutDashboard /> Merchant Center</a>
             </div>
