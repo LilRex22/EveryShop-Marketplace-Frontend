@@ -1,5 +1,6 @@
 import { CircleCheck, Dot, MonitorSmartphone, ShoppingBasket, Shirt, Armchair, Flower2, Wrench, ArrowRight, Store, MapPin, Percent, MessagesSquare, HousePlus, ShieldCheck, Eye, MapPinCheck, MessageSquareLock } from "lucide-react";
 import { HeroSearch } from "../components/HeroSearch"
+import merchantImage from "../assets/everyshop-merchant.webp";
 
 export function Home() {
     const category = [
@@ -182,7 +183,7 @@ export function Home() {
                         </div>
                         <div className="flex-1">
                             <div className={`w-full h-64 lg:h-full bg-gray-200 rounded-lg flex items-center justify-center`}>
-                                <img src='src\assets\everyshop-merchant.webp' alt='merchant' className="object-cover w-full h-full rounded-bl-lg rounded-br-lg lg:rounded-bl-none lg:rounded-tr-lg lg:rounded-br-lg" loading="lazy"/>
+                                <img src={merchantImage} alt='merchant' className="object-cover w-full h-full rounded-bl-lg rounded-br-lg lg:rounded-bl-none lg:rounded-tr-lg lg:rounded-br-lg" loading="lazy"/>
                             </div>
                         </div>
                     </div>
