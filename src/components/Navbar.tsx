@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import logo from '../assets/everyshop-logo-lockup.svg';
-import {Search, Store, LayoutDashboard, BadgePlus, CircleUserRound, Menu, X} from "lucide-react"
+import {Search, Store, LayoutDashboard, BadgePlus, CircleUserRound, Menu, X, House} from "lucide-react"
+import { NavLink, type NavLinkRenderProps } from 'react-router-dom';
 
 export function Navbar() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const activeCheck = ({isActive}:NavLinkRenderProps): string => isActive ? 'text-[#D95D28] flex items-center gap-2' : 'flex items-center gap-2 hover:text-[#D95D28]'
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 0);
@@ -29,9 +31,10 @@ export function Navbar() {
             </button>
 
             <div className={`${open ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 w-full lg:w-auto mt-4 lg:mt-0`}>
-                <a href="/explore-products" className='flex items-center gap-2 hover:text-[#D95D28]'><Search/> Explore Products</a>
-                <a href="/categories block" className='flex items-center gap-2 hover:text-[#D95D28]'><Store /> Discover Shops</a>
-                <a href="/merchant-center" className='flex items-center gap-2 hover:text-[#D95D28]'><LayoutDashboard /> Merchant Center</a>
+                <NavLink to="/" className={activeCheck}><House/> Home</NavLink>
+                <NavLink to="/explore-products" className={activeCheck}><Search/> Explore Products</NavLink>
+                <NavLink to="/categories block" className={activeCheck}><Store /> Discover Shops</NavLink>
+                <NavLink to="/merchant-center" className={activeCheck}><LayoutDashboard /> Merchant Center</NavLink>
             </div>
 
             {/* Actions */}
