@@ -8,3 +8,8 @@
   object-fit: cover;
   background-image: url('./assets/hero-1200.webp');
 }
+
+.login_img {
+  object-fit: cover;
+  background-image: url('./assets/everyshop-auth-background.svg');
+}
