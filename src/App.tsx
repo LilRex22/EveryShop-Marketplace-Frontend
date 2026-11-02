@@ -4,6 +4,8 @@ import { Login } from "./pages/Login"
 import { Layout } from "./components/Layout"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Signup } from "./pages/Signup"
+import DashboardLayout from "./components/DashboardLayout"
+import { Overview } from "./pages/dashboard/Overview"
 
 function App() {
   return (
@@ -16,6 +18,17 @@ function App() {
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+
+          {/* dashboard routing */}
+          <Route path="dashboard" element={<DashboardLayout />}>
+            <Route index element={<Overview />} />
+            {/* <Route path="products" element={<Products />} /> */}
+            {/* <Route path="enquiries" element={<Enquiries />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="support" element={<Support />} /> */}
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

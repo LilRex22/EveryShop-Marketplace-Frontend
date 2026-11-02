@@ -34,7 +34,7 @@ export function Navbar() {
                 <NavLink to="/" className={activeCheck}><House/> Home</NavLink>
                 <NavLink to="/explore-products" className={activeCheck}><Search/> Explore Products</NavLink>
                 <NavLink to="/categories block" className={activeCheck}><Store /> Discover Shops</NavLink>
-                <NavLink to="/merchant-center" className={activeCheck}><LayoutDashboard /> Merchant Center</NavLink>
+                <NavLink to="/dashboard" className={activeCheck}><LayoutDashboard /> Dashboard</NavLink>
             </div>
 
             {/* Actions */}

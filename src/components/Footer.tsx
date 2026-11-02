@@ -24,7 +24,7 @@ export function Footer() {
                 <div className="flex flex-col gap-3">
                     <h3 className='font-extrabold mb-2'>Trust & Sellers</h3>
                     <a href="" className='text-sm text-gray-500 hover:text-[#D95D28]'>List Your Shop</a>
-                    <a href="" className='text-sm text-gray-500 hover:text-[#D95D28]'>Merchant Center</a>
+                    <a href="dashboard" className='text-sm text-gray-500 hover:text-[#D95D28]'>Dashboard</a>
                     <a href="" className='text-sm text-gray-500 hover:text-[#D95D28]'>Seller Terms and Safety</a>
                 </div>
             </div>
