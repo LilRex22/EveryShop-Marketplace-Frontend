@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, MapPin, BadgePlus } from "lucide-react"
+import { BriefcaseBusiness, MapPin, BadgePlus, Store, ChartNoAxesCombined } from "lucide-react"
 
 export function Overview()  {
     return (
@@ -15,6 +15,18 @@ export function Overview()  {
                 <div className="shrink-0">
                     <a href="" className="rounded-lg py-4 px-3 bg-[#D95D28] text-white shadow-md hover:bg-[#a73a01] transition-all duration-100"><BadgePlus className="inline-block me-1"/>+ Add New Product</a> 
                 </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4">
+                <div className="rounded-lg bg-white shadow-sm p-4">
+                    <div className="flex justify-between items-center mb-2">
+                        <h2>Profile Views</h2>
+                        <p className="rounded-lg p-2 bg-[#f6f2f7] text-[#D95D28] w-fit"><Store size={20} className="inline-block"/></p>
+                    </div>
+                    <h2 className="text-3xl font-extrabold">1,245 <span><ChartNoAxesCombined size={20} className="inline-block"/>+28%</span></h2>
+                </div>
+                <div className=""></div>
+                <div className=""></div>
+                <div className=""></div>
             </div>
         </main>
     )
