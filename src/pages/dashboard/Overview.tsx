@@ -18,7 +18,7 @@ export function Overview()  {
                 </div>
             </div>
             <div className="grid grid-cols-1 min-[480px]:grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4 mt-4 sm:mt-5">
-                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0">
+                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0 border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                         <h2>Shop Views</h2>
                         <p className="rounded-lg p-2 bg-[#f6f2f7] text-[#D95D28] w-fit"><Store size={20} className="inline-block"/></p>
@@ -29,7 +29,7 @@ export function Overview()  {
                     </div>
                     <img src="src/assets/everyshop-trend-icon.svg" alt="graph" className="w-full h-auto"/>
                 </div>
-                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0">
+                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0 border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                         <h2>Listing Clicks</h2>
                         <p className="rounded-lg p-2 bg-[#f6f2f7] text-[#D95D28] w-fit"><MousePointerClick size={20} className="inline-block"/></p>
@@ -40,7 +40,7 @@ export function Overview()  {
                     </div>
                     <img src="src/assets/everyshop-performance-chart.svg" alt="graph" className="w-full h-auto"/>
                 </div>
-                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0">
+                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0 border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                         <h2>WhatsApp Leads</h2>
                         <p className="rounded-lg p-2 bg-[#f6f2f7] text-[#D95D28] w-fit"><MessageSquareQuote size={20} className="inline-block"/></p>
@@ -51,7 +51,7 @@ export function Overview()  {
                     </div>
                     <img src="src/assets/bars.svg" alt="graph" className="mt-2 w-full h-auto"/>
                 </div>
-                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0">
+                <div className="rounded-lg bg-white shadow-sm p-4 min-w-0 border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
                         <h2>Listed Items</h2>
                         <p className="rounded-lg p-2 bg-[#f6f2f7] text-[#D95D28] w-fit"><Package size={20} className="inline-block"/></p>
@@ -63,7 +63,7 @@ export function Overview()  {
                     <img src="src/assets/stock.svg" alt="graph" className="mt-2 w-full h-auto"/>
                 </div>
             </div>
-            <div className="rounded-lg shadow-md p-4 sm:p-6 mt-4 sm:mt-5 bg-[#fbf8fc]">
+            <div className="rounded-lg shadow-md p-4 sm:p-6 mt-4 sm:mt-5 bg-[#fbf8fc] border border-gray-200">
                 <div className="flex flex-wrap gap-2 justify-between items-center mb-2">
                     <h2 className="flex items-center gap-2"><span className="bg-[#92f5a4]/50 p-2 rounded-full"><ShieldCheck size={20} className="inline-block"/></span>Seller Verification</h2>
                     <p className="text-sm bg-[#D95D28] text-white text-bold py-1 px-3 rounded-full w-fit">Not Verified</p>

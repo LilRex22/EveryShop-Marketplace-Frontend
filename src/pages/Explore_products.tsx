@@ -79,7 +79,7 @@ export function Products() {
                 <h2 className="text-2xl font-extrabold mb-5">{category ? `${category}:` : ''}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     { searchedProducts.map((product) => (
-                        <div key={product.name} className="bg-white rounded-lg p-4 shadow-sm flex flex-col gap-3">
+                        <div key={product.name} className="bg-white rounded-lg p-4 shadow-sm flex flex-col gap-3 border border-gray-200">
                             <div className="w-full h-48 sm:h-56 rounded-lg bg-gray-500">
                                 <img src={product.image} alt="product_image" className="object-cover w-full h-full rounded-lg"/>
                             </div>
