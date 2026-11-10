@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Signup } from "./pages/Signup"
 import DashboardLayout from "./components/DashboardLayout"
 import { Overview } from "./pages/dashboard/Overview"
+import { MyProducts } from "./pages/dashboard/Products"
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           {/* dashboard routing */}
           <Route path="dashboard" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
-            {/* <Route path="products" element={<Products />} /> */}
+            <Route path="products" element={<MyProducts />} />
             {/* <Route path="enquiries" element={<Enquiries />} />
             <Route path="shop" element={<Shop />} />
             <Route path="analytics" element={<Analytics />} />

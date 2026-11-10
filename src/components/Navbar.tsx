@@ -39,9 +39,10 @@ export function Navbar() {
 
             {/* Actions */}
             <div className={`${open ? 'flex' : 'hidden'} lg:flex items-center gap-2 sm:gap-4 w-full lg:w-auto mt-4 lg:mt-0`}>
-                <a href="" className=" flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-[#D95D28] px-3 py-2 font-medium text-white hover:bg-[#BD4D20] transition-colors"><BadgePlus /> List your shop</a>
+                <a href="" className=" flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-[#D95D28] px-3 py-2 font-medium text-white hover:bg-[#BD4D20] transition-colors"><BadgePlus /> Create your shop</a>
                 <a href="/login" className="flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-black px-3 py-2 font-medium text-white hover:bg-[#2b2b2bda] transition-colors"><CircleUserRound /> Login</a>
             </div>
+
         </nav>
     )
 }
