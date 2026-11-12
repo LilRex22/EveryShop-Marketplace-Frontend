@@ -45,7 +45,7 @@ export function Products() {
                         
                         <div className="min-w-0">
                             <select className="text-[#D95D28] py-2 px-3 max-w-full" value={category} onChange={(event) => setCategory(event.target.value)}>
-                                <option value="">Select a category</option>
+                                <option value="">Category</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Fashion">Fashion</option>
                                 <option value="Food">Food</option>

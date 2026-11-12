@@ -1,7 +1,14 @@
-import { CircleCheck, PackageX } from "lucide-react";
-
+import { CircleCheck, PackageX, Pencil, Search } from "lucide-react";
+import { useState } from "react";
 
 export function MyProducts() {
+    const [query, setQuery] = useState("");
+    const searchedProducts = [
+        { name: 'Small Inverter 3.5kVA', description: 'A compact and reliable inverter that provides backup power for essential appliances, keeping your devices running during power outages.', image: '', price: '150,000', shop: 'Infinity Gadgets', location: 'Summervile', contact: '', shoplink: '', details: '', instock: false, category: 'Electronics' },
+        { name: 'Small Inverter 3.5kVA', description: 'A compact and reliable inverter that provides backup power for essential appliances, keeping your devices running during power outages.', image: '', price: '150,000', shop: 'Infinity Gadgets', location: 'Summervile', contact: '', shoplink: '', details: '', instock: true, category: 'Electronics' },
+        { name: 'Small Inverter 3.5kVA', description: 'A compact and reliable inverter that provides backup power for essential appliances, keeping your devices running during power outages.', image: '', price: '150,000', shop: 'Infinity Gadgets', location: 'Summervile', contact: '', shoplink: '', details: '', instock: false, category: 'Electronics' },
+    ]
+
     return (
         <main className="p-5 font-jakarta ">
             <div className="flex items-center justify-between">
@@ -15,17 +22,72 @@ export function MyProducts() {
 
             <div className="grid grid-cols-3 gap-4 mt-10">
                 <div className="shadow-md border border-gray-200 p-4 rounded-lg">
-                    <h2 className="text-[#00873c] flex justify-between">Active Listings <span ><CircleCheck/></span></h2>
-                    <h2 className="text-4xl font-bold mt-5">24 <span className="text-gray-500 font-normal text-lg">Items</span></h2>
+                    <h2 className="text-[#00873c] flex justify-between">Total Products <span ><CircleCheck/></span></h2>
+                    <h2 className="text-4xl font-bold mt-5">28 <span className="text-gray-500 font-normal text-lg">Items</span></h2>
                 </div>
                 <div className="shadow-md border border-gray-200 p-4 rounded-lg">
                     <h2 className="text-[#ba1a1a] flex justify-between">Out Of Stock <span ><PackageX/></span></h2>
-                    <h2 className="text-4xl font-bold mt-5">5 <span className="text-[#ba1a1a] font-normal text-lg">Actions Recommended</span></h2>
+                    <h2 className="text-4xl font-bold mt-5">4 <span className="text-[#ba1a1a] font-normal text-lg">Actions Recommended</span></h2>
                 </div>
                 <div className="shadow-md border border-gray-200 p-4 rounded-lg">
-                    <h2 className="text-[#00873c] flex justify-between">Active Listings <span ><CircleCheck/></span></h2>
+                    <h2 className="text-[#00873c] flex justify-between">In Stock <span ><CircleCheck/></span></h2>
                     <h2 className="text-4xl font-bold mt-5">24 <span className="text-gray-500 font-normal text-lg">Items</span></h2>
                 </div>
+            </div>
+
+            <form className="flex bg-white rounded-lg shadow-sm p-4 mt-10 gap-4 items-center border border-gray-200">
+                <div className="bg-[#f3f0f4] flex flex-1 items-center gap-2 rounded-xl px-4">
+                    <Search size={18} className="text-gray-500" />
+                    <input
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search for products in your shop..."
+                        className="w-full py-3 px-2 rounded-lg outline-none"
+                    />
+                </div>
+                <div className="bg-[#f3f0f4] flex items-center gap-2 rounded-xl px-4 w-fit">
+                    <select className="bg-transparent py-3 px-2 rounded-lg outline-none text-gray-500">
+                        <option value="">Filter by:</option>
+                        <option value="in-stock">In Stock</option>
+                        <option value="out-of-stock">Out Of Stock</option>
+                    </select>
+                </div>
+                <div className="bg-[#f3f0f4] flex items-center gap-2 rounded-xl px-4 w-fit">
+                    <select className="bg-transparent py-3 px-2 rounded-lg outline-none text-gray-500">
+                        <option value="">Category:</option>
+                        <option value="newest">Newest items</option>
+                        <option value="oldest">Oldest items</option>
+                        <option value="cheapest">Cheapest items</option>
+                        <option value="expensive">Most expensive</option>
+                    </select>
+                </div>
+                <div className="">
+                    <button type="submit" className="bg-[#D95D28] text-white rounded-lg px-3 py-2 font-medium">Search</button>
+                </div>
+            </form>
+        
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-15 gap-4">
+                { searchedProducts.map((product) => (
+                    <div key={product.name} className="bg-white rounded-lg p-4 shadow-sm flex flex-col gap-3 border border-gray-200">
+                        <div className="w-full h-48 sm:h-56 rounded-lg bg-gray-500">
+                            <img src={product.image} alt="product_image" className="object-cover w-full h-full rounded-lg"/>
+                        </div>
+                        <h2 className="text-xl sm:text-2xl font-bold">{product.name}</h2>
+                        <p className="text-gray-500 text-sm border-b border-gray-200 pb-3">{product.category}</p>
+                        <div className="flex justify-between items-center">
+                            <p className="text-extrabold text-lg">&#8358; {product.price}</p>
+                            {product.instock ? (
+                                <span className="text-[#00873c] font-bold text-sm bg-[#92f5a4] p-1 rounded-full px-2">In Stock</span>
+                            ) : (
+                                <span className="text-[#ba1a1a] font-bold text-sm bg-[#f34e4eb6] p-1 rounded-full px-2">Out of Stock</span>
+                            )}
+                        </div>
+                        <div className="flex justify-between gap-3 -mt-2">
+                            <a href={product.details} className="bg-[#D95D28] text-sm mt-3 flex-1 text-white p-3 rounded-lg text-center font-bold">Edit <Pencil size={12} className="inline-block ms-1 -mt-1"/></a>
+                        </div>
+                    </div>
+                ))}
+                {/* what remains here now is pagination */}
             </div>
         </main>    
     )
