@@ -9,12 +9,12 @@ function DashboardLayout() {
 
     return (
     <>
-        <div className="flex min-h-screen">
+        <div className="min-h-screen">
             <Sidebar open={open} onClose={() => setOpen(false)} />
             {/* main content shifted by the sidebar; content-with-sidebar CSS applies only here */}
-            <div className="flex flex-col flex-1 min-w-0">
+            <div className="flex flex-col min-h-screen lg:ml-70">
                 <Navbar onMenuClick={() => setOpen(true)} />
-                <main className="flex-1">
+                <main className="flex-1 min-w-0">
                     <Outlet />
                 </main>
                 <Footer />

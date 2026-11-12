@@ -24,7 +24,7 @@ export function Sidebar({ open = false, onClose = () => {} }: { open?: boolean; 
                 />
             )}
 
-            <aside className={`fixed inset-y-0 left-0 z-50 w-70 max-w-[85vw] overflow-y-auto transition-transform duration-200 ease-out ${open ? 'translate-x-0' : '-translate-x-full'} lg:static lg:z-auto lg:max-w-none lg:translate-x-0 lg:shrink-0 border-r border-gray-200 p-5 font-jakarta bg-[#fbf8fc]`}>
+            <aside className={`fixed inset-y-0 left-0 z-50 w-70 max-w-[85vw] overflow-y-auto transition-transform duration-200 ease-out ${open ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:max-w-none lg:w-70 border-r border-gray-200 p-5 font-jakarta bg-[#fbf8fc]`}>
                 <NavLink to="/" onClick={onClose} className="flex items-center gap-2 mb-7 px-1">
                     <img src={logo} alt="logo" className='h-8 sm:h-10 w-auto' />
                 </NavLink>
