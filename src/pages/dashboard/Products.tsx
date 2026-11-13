@@ -10,7 +10,7 @@ export function MyProducts() {
     ]
 
     return (
-        <main className="p-4 sm:p-5 font-jakarta ">
+        <main className="p-4 sm:p-5 font-jakarta">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="w-full sm:w-2/3 lg:w-1/2">
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight">Products & Catalog<span className="ms-2 text-gray-500 text-sm bg-[#f0edf1] rounded-full py-1 px-2 whitespace-nowrap inline-block align-middle">28 items</span></h1>

@@ -7,6 +7,7 @@ import { Signup } from "./pages/Signup"
 import DashboardLayout from "./components/DashboardLayout"
 import { Overview } from "./pages/dashboard/Overview"
 import { MyProducts } from "./pages/dashboard/Products"
+import { MyShop } from "./pages/dashboard/Shop"
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
           <Route path="dashboard" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
             <Route path="products" element={<MyProducts />} />
+            <Route path="shop" element={<MyShop />} />
             {/* <Route path="enquiries" element={<Enquiries />} />
-            <Route path="shop" element={<Shop />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="settings" element={<Settings />} />
             <Route path="support" element={<Support />} /> */}
