@@ -28,6 +28,31 @@ export function MyShop() {
                     <p className="text-gray-500 mb-2 flex justify-between">Your shop's public URL: <span className="text-gray-500  text-sm">You can share your shop's public URL with others.</span></p>
                     <CopyField value="your-shop-public-url" />
                 </div>
+
+                <div className="grid grid-cols-2 mt-15">
+                    {/* branding */}
+                    <div className="rounded-lg shadow-md border border-gray-100 p-5">
+                        <div className="">
+                            <h2 className="text-2xl font-extrabold">Branding & Visuals</h2>
+                            <p className="text-gray-500">Customize your shop's appearance to reflect your brand identity.</p>
+                        </div>
+                        <div className=" mt-3">
+                            <h3 className="font-extrabold">Shop Profile Image</h3>
+                            <div className="w-full bg-[#dcd9dd] rounded-lg h-48 mt-2">
+                                {/* shop image goes here */}
+                            </div>
+                            <a href="" className="inline-block mt-2 bg-[#D95D28] text-white rounded-lg px-3 py-2 hover:bg-[#BD4D20] transition-colors">Change Image</a>
+                        </div>
+                        {/* shop details */}
+                        <div className="mt-5">
+                            <label htmlFor="name">Shop Name</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    
+                    {/* contact */}
+                    <div className=""></div>
+                </div>
             </form>
         </main>
     )

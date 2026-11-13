@@ -72,7 +72,7 @@ export function MyProducts() {
                         <div className="w-full h-44 sm:h-48 lg:h-56 rounded-lg bg-gray-500">
                             <img src={product.image} alt="product_image" className="object-cover w-full h-full rounded-lg"/>
                         </div>
-                        <h2 className="text-xl sm:text-2xl font-bold break-words">{product.name}</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold wrap-break-word">{product.name}</h2>
                         <p className="text-gray-500 text-sm border-b border-gray-200 pb-3">{product.category}</p>
                         <div className="flex justify-between items-center gap-2">
                             <p className="text-extrabold text-lg">&#8358; {product.price}</p>
