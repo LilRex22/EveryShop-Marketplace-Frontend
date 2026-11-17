@@ -1,4 +1,4 @@
-import { CircleCheck, Eye, Brush, Phone, MessageSquareText, PhoneCall, Mail } from "lucide-react"
+import { CircleCheck, Eye, Brush, Phone, MessageSquareText, PhoneCall, Mail, MapPin, Store, Map, Clock, Briefcase, Calendar } from "lucide-react"
 import { CopyField } from "../../components/dashboard/CopyField"
 import { useState } from "react"
 
@@ -10,6 +10,11 @@ export function MyShop() {
     const [description, setDescription] = useState('')
     const [call, setCall] = useState('')
     const [email, setEmail] = useState('')
+    const [market, setMarket] = useState('')
+    const [section, setSection] = useState('')
+    const [address, setAddress] = useState('')
+    const [workingDays, setWorkingDays] = useState('')
+    const [workingHours, setWorkingHours] = useState('')
 
     return (
         <main className="p-4 sm:p-5 font-jakarta">
@@ -40,7 +45,7 @@ export function MyShop() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8 sm:mt-15">
                     {/* branding */}
-                    <div className="rounded-lg shadow-md border border-gray-100 p-4 sm:p-5">
+                    <div className="rounded-lg shadow-md border border-gray-100 p-4 sm:p-5 h-fit">
                         <div className="">
                             <h2 className="text-xl sm:text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#ffb59a]"><Brush size={18} className="inline-block me-1"/></span> Branding & Visuals</h2>
                             <p className="text-gray-500">Customize your shop's appearance to reflect your brand identity.</p>
@@ -156,8 +161,88 @@ export function MyShop() {
                         </div>
                     
                         {/* location*/}
-                        <div className="">
-                            
+                        <div className="rounded-lg shadow-md border border-gray-100 p-4 sm:p-5 h-fit">
+                            <div className="">
+                                <h2 className="text-xl sm:text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#dcd9dd]"><MapPin size={18} className="inline-block me-1"/></span> Shop Location & Hours</h2>
+                                <p className="text-gray-500">Where customers can view physical samples & pick up orders.</p>
+                            </div>
+
+                            <div className="mt-5 flex flex-col gap-4">
+                                <div className="">
+                                    <label htmlFor="market"><Store size={18} className="inline-block me-1"/>Market Area</label>
+                                    <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
+                                        <MapPin size={20} className="mt-1 shrink-0"/>
+                                        <input
+                                            type="text"
+                                            id="market"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
+                                            value={market}
+                                            onChange={(e) => setMarket(e.target.value)}
+                                        />
+                                    </div>
+                                    <p className="text-gray-500 text-sm mt-1">* The name of the market where your shop is located. *</p>
+                                </div>
+
+                                <div className="">
+                                    <label htmlFor="section"><Store size={18} className="inline-block me-1"/>Section / Line</label>
+                                    <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
+                                        <MapPin size={20} className="mt-1 shrink-0"/>
+                                        <input
+                                            type="text"
+                                            id="section"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
+                                            value={section}
+                                            onChange={(e) => setSection(e.target.value)}
+                                        />
+                                    </div>
+                                    <p className="text-gray-500 text-sm mt-1">* The name of the line your shop is located. *</p>
+                                </div>
+
+                                <div className="">
+                                    <label htmlFor="address"><Map size={18} className="inline-block me-1"/>Additional Address Detail</label>
+                                    <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
+                                        <MapPin size={20} className="mt-1 shrink-0"/>
+                                        <input
+                                            type="text"
+                                            id="address"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
+                                            value={address}
+                                            onChange={(e) => setAddress(e.target.value)}
+                                        />
+                                    </div>
+                                    <p className="text-gray-500 text-sm mt-1">* Additional directions about you shop location. *</p>
+                                </div>
+
+                                <div className="flex gap-2">
+                                    <div className="">
+                                        <label htmlFor="working-days"><Briefcase size={18} className="inline-block me-1"/>Working Days</label>
+                                        <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
+                                            <Calendar size={20} className="mt-1 shrink-0"/>
+                                            <input
+                                                type="text"
+                                                id="working-days"
+                                                className="w-full min-w-0 bg-transparent outline-none ms-3"
+                                                value={workingDays}
+                                                onChange={(e) => setWorkingDays(e.target.value)}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="">
+                                        <label htmlFor="working-hours"><Briefcase size={18} className="inline-block me-1"/>Working Hours</label>
+                                        <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
+                                            <Clock size={20} className="mt-1 shrink-0"/>
+                                            <input
+                                                type="text"
+                                                id="working-hours"
+                                                className="w-full min-w-0 bg-transparent outline-none ms-3"
+                                                value={workingHours}
+                                                onChange={(e) => setWorkingHours(e.target.value)}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
