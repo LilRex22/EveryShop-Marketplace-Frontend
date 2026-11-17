@@ -20,7 +20,7 @@ export function MyShop() {
                         <p className="text-sm sm:text-md font-medium text-gray-500">Your shop's identity starts here. Manage your storefront, update your business information, and showcase what makes your business unique to potential customers.</p>
                     </div>
 
-                    <div className="flex gap-2">
+                    <div className="flex flex-col gap-2 sm:flex-row">
                             <a href="" className="shadow-md rounded-lg bg-[#f3f0f4] px-3 py-3 font-medium text-black hover:bg-[#dcd9dd] transition-colors w-full sm:w-auto text-center whitespace-nowrap">
                                 <Eye className="inline-block mr-2" />
                                 View Public Profile
@@ -34,20 +34,20 @@ export function MyShop() {
                 </div>
                 
                 <div className="mt-5 p-4 border border-gray-100 shadow-md rounded-lg">
-                    <p className="text-gray-500 mb-2 flex justify-between">Your shop's public URL: <span className="text-gray-500  text-sm">You can share your shop's public URL with others.</span></p>
+                    <p className="text-gray-500 mb-2 flex flex-col gap-1 sm:flex-row sm:justify-between">Your shop's public URL: <span className="text-gray-500  text-sm">You can share your shop's public URL with others.</span></p>
                     <CopyField value="your-shop-public-url" />
                 </div>
 
-                <div className="grid grid-cols-2 gap-5 mt-15">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8 sm:mt-15">
                     {/* branding */}
-                    <div className="rounded-lg shadow-md border border-gray-100 p-5">
+                    <div className="rounded-lg shadow-md border border-gray-100 p-4 sm:p-5">
                         <div className="">
-                            <h2 className="text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#ffb59a]"><Brush size={18} className="inline-block me-1"/></span> Branding & Visuals</h2>
+                            <h2 className="text-xl sm:text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#ffb59a]"><Brush size={18} className="inline-block me-1"/></span> Branding & Visuals</h2>
                             <p className="text-gray-500">Customize your shop's appearance to reflect your brand identity.</p>
                         </div>
                         <div className=" mt-3">
                             <h3 className="font-extrabold">Shop Profile Image</h3>
-                            <div className="w-full bg-[#dcd9dd] rounded-lg h-48 mt-2">
+                            <div className="w-full bg-[#dcd9dd] rounded-lg h-40 sm:h-48 mt-2">
                                 {/* shop image goes here */}
                             </div>
                             <a href="" className="inline-block mt-2 bg-[#D95D28] text-white rounded-lg px-3 py-2 hover:bg-[#BD4D20] transition-colors">Change Image</a>
@@ -104,20 +104,20 @@ export function MyShop() {
                     
                     <div className="flex flex-col gap-4">
                         {/* contact */}
-                        <div className="rounded-lg shadow-md border border-gray-100 p-5 h-fit">
+                        <div className="rounded-lg shadow-md border border-gray-100 p-4 sm:p-5 h-fit">
                             <div className="">
-                                <h2 className="text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#92f5a4]"><Phone size={18} className="inline-block me-1"/></span> Contact and Channels</h2>
+                                <h2 className="text-xl sm:text-2xl font-extrabold"><span className="inline-flex items-center justify-center p-2 rounded-lg bg-[#92f5a4]"><Phone size={18} className="inline-block me-1"/></span> Contact and Channels</h2>
                                 <p className="text-gray-500">Manage your shop's contact information and communication channels.</p>
                             </div>
                             <div className="mt-5 flex flex-col gap-4">
                                 <div className="">
                                     <label htmlFor="line"><MessageSquareText size={18} className="inline-block me-1 text-[#79db8d]"/>Whatsapp Line</label>
                                     <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
-                                        <PhoneCall size={20} className="mt-1"/>
+                                        <PhoneCall size={20} className="mt-1 shrink-0"/>
                                         <input
                                             type="number"
                                             id="line"
-                                            className="w-full bg-transparent outline-none ms-3"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
                                             value={line}
                                             onChange={(e) => setLine(e.target.value)}
                                         />
@@ -128,11 +128,11 @@ export function MyShop() {
                                 <div className="">
                                     <label htmlFor="call"><Phone size={18} className="inline-block me-1 text-[#c54f1a]"/>Telephone Line (voice calls)</label>
                                     <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
-                                        <PhoneCall size={20} className="mt-1"/>
+                                        <PhoneCall size={20} className="mt-1 shrink-0"/>
                                         <input
                                             type="number"
                                             id="call"
-                                            className="w-full bg-transparent outline-none ms-3"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
                                             value={call}
                                             onChange={(e) => setCall(e.target.value)}
                                         />
@@ -142,11 +142,11 @@ export function MyShop() {
                                 <div className="">
                                     <label htmlFor="email"><Mail size={18} className="inline-block me-1 text-[#c54f1a]"/>Seller Email (Notifications)</label>
                                     <div className="flex bg-[#dcd9dd] mt-2 border border-gray-100 rounded-lg p-2 w-full">
-                                        <Mail size={20} className="mt-1"/>
+                                        <Mail size={20} className="mt-1 shrink-0"/>
                                         <input
                                             type="email"
                                             id="email"
-                                            className="w-full bg-transparent outline-none ms-3"
+                                            className="w-full min-w-0 bg-transparent outline-none ms-3"
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                         />
@@ -157,7 +157,7 @@ export function MyShop() {
                     
                         {/* location*/}
                         <div className="">
-
+                            
                         </div>
                     </div>
                 </div>
