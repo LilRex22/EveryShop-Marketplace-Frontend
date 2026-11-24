@@ -78,7 +78,7 @@ export function Products() {
             <section className="px-4 sm:px-8 lg:px-15 py-6 lg:py-8">
                 {/* there's a problem in the h2 below to be debugged, the selected category is displayed even before the form is submitted, which should be after the form is submitted */}
                 <h2 className="text-2xl font-extrabold mb-5">{category ? `${category}:` : ''}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                     { searchedProducts.map((product) => (
                         <div key={product.name} className="bg-white rounded-lg p-4 shadow-sm flex flex-col gap-3 border border-gray-200">
                             <div className="w-full h-48 sm:h-56 rounded-lg bg-gray-500">

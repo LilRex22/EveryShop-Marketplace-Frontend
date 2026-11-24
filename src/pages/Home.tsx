@@ -135,9 +135,9 @@ export function Home() {
                                 </div>
                                 <p className="text-md text-gray-500">{shop.description}</p>
                                 <div className="flex flex-row gap-1 w-full h-24 sm:h-30 items-center justify-center border-b border-gray-200 pb-4">
-                                    <img src={shop.pic1} alt="shop_pic1" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
-                                    <img src={shop.pic2} alt="shop_pic2" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
-                                    <img src={shop.pic3} alt="shop_pic3" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
+                                    <img src={shop.pic1} alt="prod1" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
+                                    <img src={shop.pic2} alt="prod2" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
+                                    <img src={shop.pic3} alt="prod3" loading="lazy" className="object-cover w-full h-full rounded-lg bg-gray-200"/>
                                 </div>
                                 <div className="flex flex-row items-center justify-between w-full gap-2">
                                     <p className="mt-1 text-xs text-gray-500">{shop.activeListings} Active Listings</p>
