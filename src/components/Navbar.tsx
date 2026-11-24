@@ -30,19 +30,28 @@ export function Navbar() {
                 {open ? <X /> : <Menu />}
             </button>
 
-            <div className={`${open ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 w-full lg:w-auto mt-4 lg:mt-0`}>
-                <NavLink to="/" className={activeCheck}><House/> Home</NavLink>
-                <NavLink to="/explore-products" className={activeCheck}><Search/> Explore Products</NavLink>
-                <NavLink to="/categories block" className={activeCheck}><Store /> Discover Shops</NavLink>
-                <NavLink to="/dashboard" className={activeCheck}><LayoutDashboard /> Dashboard</NavLink>
-            </div>
+            <div
+                className={`
+                    grid w-full transition-[grid-template-rows,opacity] duration-300 ease-in-out
+                    ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}
+                    lg:flex lg:w-auto lg:flex-1 lg:grid-rows-none lg:opacity-100 lg:items-center lg:justify-between lg:ml-8
+                `}
+            >
+                <div className="overflow-hidden lg:overflow-visible lg:flex lg:flex-1 lg:items-center lg:justify-between">
+                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 w-full lg:w-auto pt-4 lg:pt-0">
+                        <NavLink to="/" className={activeCheck}><House/> Home</NavLink>
+                        <NavLink to="/explore-products" className={activeCheck}><Search/> Explore Products</NavLink>
+                        <NavLink to="/explore-shops" className={activeCheck}><Store /> Discover Shops</NavLink>
+                        <NavLink to="/dashboard" className={activeCheck}><LayoutDashboard /> Dashboard</NavLink>
+                    </div>
 
-            {/* Actions */}
-            <div className={`${open ? 'flex' : 'hidden'} lg:flex items-center gap-2 sm:gap-4 w-full lg:w-auto mt-4 lg:mt-0`}>
-                <a href="" className=" flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-[#D95D28] px-3 py-2 font-medium text-white hover:bg-[#BD4D20] transition-colors"><BadgePlus /> Create your shop</a>
-                <a href="/login" className="flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-black px-3 py-2 font-medium text-white hover:bg-[#2b2b2bda] transition-colors"><CircleUserRound /> Login</a>
+                    {/* Actions */}
+                    <div className="flex items-center gap-2 sm:gap-4 w-full lg:w-auto pt-4 lg:pt-0">
+                        <a href="" className="flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-[#D95D28] px-3 py-2 font-medium text-white hover:bg-[#BD4D20] transition-colors"><BadgePlus /> Create your shop</a>
+                        <a href="/login" className="flex flex-1 lg:flex-none justify-center items-center gap-2 rounded-lg bg-black px-3 py-2 font-medium text-white hover:bg-[#2b2b2bda] transition-colors"><CircleUserRound /> Login</a>
+                    </div>
+                </div>
             </div>
-
         </nav>
     )
 }

@@ -8,6 +8,7 @@ import DashboardLayout from "./components/DashboardLayout"
 import { Overview } from "./pages/dashboard/Overview"
 import { MyProducts } from "./pages/dashboard/Products"
 import { MyShop } from "./pages/dashboard/Shop"
+import { Shops } from "./pages/Explore_shops"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="explore-products" element={<Products />} />
+            <Route path="explore-shops" element={<Shops />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

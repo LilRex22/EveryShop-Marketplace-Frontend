@@ -6,7 +6,9 @@ export function Login() {
     return (
         <div className="font-jakarta bg-[#fbf8fc] flex min-h-screen">
             <form className="px-6 py-8 sm:px-12 lg:px-20 lg:py-10 w-full max-w-xl mx-auto lg:max-w-none lg:mx-0 lg:w-1/2">
-                <img src={logo} alt="logo" className='w-48 sm:w-70'/>
+                <a href="/">
+                    <img src={logo} alt="logo" className='w-48 sm:w-70'/>
+                </a>
                 <h1 className='mt-10 font-bold leading-tight tracking-tight text-3xl sm:text-4xl'>Welcome back</h1>
                 <p className='text-gray-500 text-md w-full sm:w-100 mt-3'>Log in to manage your shop, update product listings and keep your business information up to date.</p>
 

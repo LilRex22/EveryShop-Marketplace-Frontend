@@ -43,7 +43,7 @@ export function Products() {
                     <div className="flex flex-wrap sm:flex-nowrap lg:flex-1 items-center gap-2 rounded-xl bg-[#f6f2f7] px-4">
                         <Search size={30} className="text-gray-500 shrink-0" />
                         
-                        <div className="min-w-0">
+                        <div className="min-w-0 w-50">
                             <select className="text-[#D95D28] py-2 px-3 max-w-full" value={category} onChange={(event) => setCategory(event.target.value)}>
                                 <option value="">Category</option>
                                 <option value="Electronics">Electronics</option>
@@ -76,6 +76,7 @@ export function Products() {
 
             {/* the searched products */}
             <section className="px-4 sm:px-8 lg:px-15 py-6 lg:py-8">
+                {/* there's a problem in the h2 below to be debugged, the selected category is displayed even before the form is submitted, which should be after the form is submitted */}
                 <h2 className="text-2xl font-extrabold mb-5">{category ? `${category}:` : ''}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     { searchedProducts.map((product) => (
@@ -90,7 +91,7 @@ export function Products() {
                                 <a href={product.shoplink} className="text-xs text-gray-500 flex items-center gap-1 hover:text-[#D95D28]"><Store size={20} className="inline-block"/> {product.shop}</a>
                             </div>
                             <div className="flex justify-between gap-3 -mt-2">
-                                <a href={product.details} className="bg-[#D95D28] text-sm mt-3 flex-1 text-white p-3 rounded-lg text-center font-bold">Details <ArrowRight size={12} className="inline-block"/></a>
+                                <a href={product.details} className="bg-[#D95D28] text-sm mt-3 flex-1 text-white p-3 rounded-lg text-center font-bold hover:bg-[#BD4D20] transition-colors">Details <ArrowRight size={12} className="inline-block"/></a>
                                 <a href={product.contact} className="mt-3 bg-[#005322] p-3 rounded-lg"><MessageSquareText size={20} className="text-white font-bold"/></a>
                             </div>
                         </div>
