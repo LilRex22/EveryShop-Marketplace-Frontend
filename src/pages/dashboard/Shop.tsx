@@ -96,13 +96,17 @@ export function MyShop() {
 
                             <div className="">
                                 <label htmlFor="category">Shop Category</label>
-                                <input 
-                                    type="text" 
+                                <select 
                                     id="category"
                                     className="mt-2 border border-gray-100 bg-[#dcd9dd] rounded-lg p-2 w-full"
                                     value={category}
                                     onChange={(e) => setCategory(e.target.value)}
-                                />
+                                >
+                                    <option value="">Category</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Fashion">Fashion</option>
+                                    <option value="Food">Food</option>
+                                </select>
                             </div>
                         </div>
                     </div>

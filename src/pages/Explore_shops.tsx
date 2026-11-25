@@ -34,12 +34,16 @@ export function Shops () {
 
             {/* shop searching and filtering */}
             <section className="px-4 sm:px-8 lg:px-15 py-6 lg:py-10">
-                <form onSubmit={() => setCategory(category)} className="bg-white p-3 sm:p-4 rounded-lg shadow-sm -mt-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-                    <div className="flex flex-col sm:flex-row sm:flex-nowrap lg:flex-1 items-stretch sm:items-center gap-1 sm:gap-2 rounded-xl bg-[#f6f2f7] px-3 sm:px-4 py-1 sm:py-0">
+                <form
+                    onSubmit={(e) => { e.preventDefault(); }}
+                    className="bg-white p-3 sm:p-4 rounded-lg shadow-sm -mt-5 flex flex-col lg:flex-row lg:items-center gap-3"
+                    >
+                    {/* left: takes remaining space, allowed to shrink */}
+                    <div className="flex flex-col sm:flex-row sm:flex-nowrap flex-1 min-w-0 items-stretch sm:items-center gap-1 sm:gap-2 rounded-xl bg-[#f6f2f7] px-3 sm:px-4 py-1 sm:py-0">
                         <Search size={30} className="text-gray-500 shrink-0 hidden sm:block" />
-                        
-                        <div className="min-w-0 w-full sm:w-50">
-                            <select className="text-[#D95D28] py-2 px-1 sm:px-3 w-full max-w-full bg-transparent" value={category} onChange={(event) => setCategory(event.target.value)}>
+
+                        <div className="shrink-0 w-full sm:w-40">
+                            <select className="text-[#D95D28] py-2 px-1 sm:px-3 w-full bg-transparent" value={category} onChange={(e) => setCategory(e.target.value)}>
                                 <option value="">Category</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Fashion">Fashion</option>
@@ -50,21 +54,24 @@ export function Shops () {
                         <input
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
-                        placeholder="Search in this category(eg.,inverter, solar, charger)....."
-                        className="w-full min-w-0 bg-transparent py-3 px-1 sm:px-0 text-sm sm:text-base outline-none"
+                        placeholder="Search in this category..."
+                        className="flex-1 w-full min-w-0 bg-transparent py-3 px-1 sm:px-0 text-sm sm:text-base outline-none"
                         />
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
-                        <div className="border border-gray-300 p-1 rounded-lg w-full sm:flex-1 lg:flex-none">
-                            <select className="text-gray-500 py-2 px-3 w-full" value={filter} onChange={(event) => setFilter(event.target.value)}>
+
+                    {/* right: fixed to its content, never shrinks */}
+                    <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto lg:shrink-0">
+                        <div className="border border-gray-300 p-1 rounded-lg w-full sm:flex-1 lg:flex-none lg:w-48">
+                            <select className="text-gray-500 py-2 px-3 w-full" value={filter} onChange={(e) => setFilter(e.target.value)}>
                                 <option value="">Sort by:</option>
                                 <option value="newest">Verified Shops</option>
                                 <option value="oldest">Most rated Shops</option>
                                 <option value="cheapest">Featured Shops</option>
-                                {/* <option value="expensive"></option> */}
                             </select>
                         </div>
-                        <button type="submit" className="bg-[#D95D28] text-white rounded-lg px-4 py-3 sm:py-2 w-full sm:w-auto font-medium">Find Shops</button>
+                        <button type="submit" className="bg-[#D95D28] text-white rounded-lg px-4 py-3 sm:py-2 w-full sm:w-auto whitespace-nowrap font-medium">
+                        Find Shops
+                        </button>
                     </div>
                 </form>
             </section>

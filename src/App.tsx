@@ -9,6 +9,7 @@ import { Overview } from "./pages/dashboard/Overview"
 import { MyProducts } from "./pages/dashboard/Products"
 import { MyShop } from "./pages/dashboard/Shop"
 import { Shops } from "./pages/Explore_shops"
+import { CreateShop } from "./pages/create_shop"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="explore-products" element={<Products />} />
             <Route path="explore-shops" element={<Shops />} />
+            <Route path="create-shop" element={<CreateShop />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
