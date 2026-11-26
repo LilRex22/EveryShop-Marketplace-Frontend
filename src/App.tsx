@@ -10,6 +10,7 @@ import { MyProducts } from "./pages/dashboard/Products"
 import { MyShop } from "./pages/dashboard/Shop"
 import { Shops } from "./pages/Explore_shops"
 import { CreateShop } from "./pages/create_shop"
+import { CreateProduct } from "./pages/dashboard/create_product"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="dashboard" element={<DashboardLayout />}>
             <Route index element={<Overview />} />
             <Route path="products" element={<MyProducts />} />
+            <Route path="products/create" element={<CreateProduct />} />
             <Route path="shop" element={<MyShop />} />
             {/* <Route path="enquiries" element={<Enquiries />} />
             <Route path="analytics" element={<Analytics />} />

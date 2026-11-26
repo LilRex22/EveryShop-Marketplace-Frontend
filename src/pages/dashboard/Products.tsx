@@ -1,5 +1,6 @@
 import { CircleCheck, PackageX, Pencil, Search } from "lucide-react";
 import { useState } from "react";
+import { NavLink, } from "react-router-dom";
 
 export function MyProducts() {
     const [query, setQuery] = useState("");
@@ -17,7 +18,7 @@ export function MyProducts() {
                     <p className="text-sm sm:text-md font-medium text-gray-500">Manage the products in your shop and keep your listings up to date. Add new products or make changes whenever you need to.</p>
                 </div>
             
-                <a href="" className="shadow-md rounded-lg bg-[#D95D28] px-3 py-3 font-medium text-white hover:bg-[#BD4D20] transition-colors w-full sm:w-auto text-center whitespace-nowrap">+ Add New Product</a>
+                <NavLink to="create" className="shadow-md rounded-lg bg-[#D95D28] px-3 py-3 font-medium text-white hover:bg-[#BD4D20] transition-colors w-full sm:w-auto text-center whitespace-nowrap">+ Add New Product</NavLink>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 sm:mt-10">
