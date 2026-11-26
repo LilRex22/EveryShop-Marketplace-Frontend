@@ -11,6 +11,8 @@ export function CreateShop () {
     const [detail, setDetail] = useState('')
     const [whatsappLine, setWhatsappLine] = useState('')
     const [callLine, setCallLine] = useState('')
+    const [hours, setHours] = useState('')
+    const [days, setDays] = useState('')
 
     return (
         <main className="min-h-full text-black bg-[#eae7eb] font-jakarta overflow-x-hidden p-2 sm:p-5 flex justify-center">
@@ -192,6 +194,44 @@ export function CreateShop () {
                         </div>
                     </div>
                 </div>
+
+                {/* 5 */}
+                <div className="mt-8 sm:mt-10">
+                    <h2 className="text-xl sm:text-2xl font-bold flex items-center mb-6 sm:mb-8">
+                        <span className="px-3 me-2 rounded-lg text-lg sm:text-xl bg-[#ffdad6]">5</span>    
+                        Working Days & Hours
+                    </h2>
+
+                    <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-2 w-full">
+                        <div className="w-full sm:w-1/2 min-w-0">
+                            <label htmlFor="days" className="font-bold">Working Days</label>
+                            <input 
+                                type="text"
+                                id="days"
+                                className="w-full min-w-0 p-3 rounded-lg outline-none bg-[#f6f2f7] mt-1"
+                                placeholder="E.g. Monday - Friday"
+                                value={days}
+                                onChange={e => setDays(e.target.value)}
+                            />
+                            <p className="text-xs sm:text-sm text-gray-500">*Let customers know the days of the week your shop is open.*</p>
+                        </div>
+                        
+                        <div className="w-full sm:w-1/2 min-w-0">
+                            <label htmlFor="hours" className="font-bold">Working Hours</label>
+                            <input 
+                                type="text"
+                                id="line"
+                                className="w-full min-w-0 p-3 rounded-lg outline-none bg-[#f6f2f7] mt-1"
+                                placeholder="E.g. 9:00PM - 6:00PM"
+                                value={hours}
+                                onChange={e => setHours(e.target.value)}
+                            />
+                            <p className="text-xs sm:text-sm text-gray-500">*Specify your shops working hours within the week.*</p>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div className="mt-5 w-full">
                     <button type="submit" className="p-3 rounded-lg bg-[#D95D28] text-white w-full hover:bg-[#BD4D20] transition-colors">Create Shop</button>
                 </div>
